@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Open Your Gift · sadhuuu 🎀</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Playfair+Display:ital@0;1&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <span class="nav-brand">🎀 sadhuuu's Day</span>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="reasons.html">Reasons I Love You</a></li>
+      <li><a href="timeline.html">Our Timeline</a></li>
+      <li><a href="gift.html" class="active">Open Your Gift</a></li>
+      <li><a href="closing.html">A Wish For You</a></li>
+    </ul>
+  </nav>
+
+  <span class="corner-bow tl">🎀</span>
+  <span class="corner-bow tr">🎀</span>
+
+  <main>
+    <section class="section">
+      <h1 class="page-title reveal">Open Your Gift</h1>
+      <p class="subtitle reveal" style="transition-delay:.1s">go on... click the box 🎁</p>
+
+      <div class="gift-wrap">
+        <!-- Click the box to reveal the message -->
+        <div class="giftbox" id="giftbox" role="button" tabindex="0"
+             aria-label="Open your gift">🎁</div>
+
+        <!-- ==========================================================
+             THE BIRTHDAY MESSAGE — EDIT this to your heartfelt note.
+             It stays hidden until she clicks the box.
+             ========================================================== -->
+        <div class="gift-message" id="giftMessage">
+          <h2 class="section-title" style="margin-top:0">Happy Birthday, my sadhuuu 🎂</h2>
+          <p>
+            <!-- EDIT: write your heartfelt birthday message here -->
+            I wanted to give you something that money can't buy — a little reminder of
+            how deeply loved you are. Thank you for being the most incredible friend,
+            for every laugh, every talk, every moment. You make the whole world softer
+            and brighter just by being in it.
+          </p>
+          <p style="margin-top:14px">
+            <!-- EDIT: continue your message -->
+            On your birthday I wish you all the joy you so freely give to everyone else.
+            I'm so lucky the universe gave me you. Here's to another year of us. 💕
+          </p>
+          <p style="margin-top:14px; font-family:var(--font-script); font-size:1.6rem; color:var(--pink-deep)">
+            — with all my love, anu 🩷
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- a photo or two near the reveal -->
+    <section class="section">
+      <div class="photo-row">
+        <!-- REPLACE: photos/photo35.jpg — caption: "you deserve the world" -->
+        <figure class="polaroid reveal from-left" style="--tilt:-4deg">
+          <span class="tape"></span>
+          <img src="photos/WhatsApp%20Image%202026-07-14%20at%2002.17.25.jpeg" alt="you deserve the world" />
+          <figcaption class="caption">you deserve the world</figcaption>
+        </figure>
+        <!-- REPLACE: photos/photo36.jpg — caption: "my gift is your friendship" -->
+        <figure class="polaroid reveal from-right" style="--tilt:5deg; transition-delay:.12s">
+          <span class="pin"></span>
+          <img src="photos/pretty.jpeg" alt="my gift is your friendship" />
+          <figcaption class="caption">my gift is your friendship</figcaption>
+        </figure>
+      </div>
+
+      <p class="reveal">
+        <a href="closing.html" class="btn">One last thing →</a>
+      </p>
+    </section>
+  </main>
+
+  <button class="music-toggle" aria-label="Play music">🔇</button>
+  <footer class="site-footer">Made with 💗 · tap any photo to enlarge it</footer>
+
+  <script src="js/main.js"></script>
+  <!-- gift box open logic -->
+  <script>
+    (function () {
+      const box = document.getElementById('giftbox');
+      const msg = document.getElementById('giftMessage');
+      let opened = false;
+      function openGift() {
+        if (opened) return;
+        opened = true;
+        box.textContent = '🎉';
+        box.classList.add('opened');
+        msg.classList.add('show');
+        if (window.confettiBurst) confettiBurst(120);
+        msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      box.addEventListener('click', openGift);
+      box.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openGift(); }
+      });
+    })();
+  </script>
+<script src="js/nav-bridge.js"></script>
+</body>
+</html>

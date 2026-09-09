@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Wish For You · sadhuuu 🎀</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Playfair+Display:ital@0;1&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <span class="nav-brand">🎀 sadhuuu's Day</span>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="reasons.html">Reasons I Love You</a></li>
+      <li><a href="timeline.html">Our Timeline</a></li>
+      <li><a href="gift.html">Open Your Gift</a></li>
+      <li><a href="closing.html" class="active">A Wish For You</a></li>
+    </ul>
+  </nav>
+
+  <span class="corner-bow tl">🎀</span>
+  <span class="corner-bow tr">🎀</span>
+
+  <main>
+    <section class="section">
+      <h1 class="page-title reveal">A Wish For You</h1>
+      <p class="reveal" style="font-size:1.4rem; margin-top:10px">
+        I hope this year brings you everything you deserve 💕
+      </p>
+      <p class="subtitle reveal" style="transition-delay:.12s">
+        and I'll be right here for all of it.
+      </p>
+    </section>
+
+    <!-- one last favorite photo of you two as the final image -->
+    <section class="section">
+      <div class="photo-row">
+        <!-- REPLACE: photos/photo37.jpg — caption: "my favorite person, my favorite memories" -->
+        <figure class="polaroid reveal" style="--tilt:-3deg; max-width:320px">
+          <span class="tape"></span>
+          <img src="photos/WhatsApp%20Image%202026-07-11%20at%2002.06.43%20%282%29.jpeg" alt="my favorite person, my favorite memories" />
+          <figcaption class="caption">my favorite person, my favorite memories</figcaption>
+        </figure>
+      </div>
+
+      <h2 class="section-title reveal">Happy Birthday, sadhuuu 🎀🎂</h2>
+      <p class="reveal">Now go make a wish. 🌟</p>
+
+      <p class="reveal" style="margin-top:24px">
+        <a href="home.html" class="btn">Back to the beginning ↺</a>
+      </p>
+    </section>
+  </main>
+
+  <button class="music-toggle" aria-label="Play music">🔇</button>
+  <footer class="site-footer">Made with 💗 · just for you</footer>
+
+  <script src="js/main.js"></script>
+  <!-- big finale: confetti + a shower of rising hearts, and a bow bounce -->
+  <script>
+    window.addEventListener('load', () => {
+      if (window.confettiBurst) confettiBurst(140);
+      // extra heart shower
+      const layer = document.getElementById('decor-layer');
+      if (layer) {
+        for (let i = 0; i < 30; i++) {
+          setTimeout(() => {
+            const s = document.createElement('span');
+            s.className = 'floater';
+            s.textContent = ['💗','💕','🩷','✨','🎀'][i % 5];
+            s.style.left = Math.random() * 100 + 'vw';
+            s.style.fontSize = (1 + Math.random() * 2) + 'rem';
+            const d = 5 + Math.random() * 5;
+            s.style.animationDuration = d + 's';
+            layer.appendChild(s);
+            setTimeout(() => s.remove(), d * 1000 + 500);
+          }, i * 120);
+        }
+      }
+      // bounce the corner bows
+      document.querySelectorAll('.corner-bow').forEach((bow) => {
+        bow.animate(
+          [{ transform: 'scale(1)' }, { transform: 'scale(1.6)' }, { transform: 'scale(1)' }],
+          { duration: 900, iterations: 3, easing: 'ease-in-out' }
+        );
+      });
+    });
+  </script>
+<script src="js/nav-bridge.js"></script>
+</body>
+</html>

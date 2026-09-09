@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday sadhuuu 🎀</title>
+
+  <!-- ============================================================
+       FONTS — cursive/script headings + rounded body font
+       ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Playfair+Display:ital@0;1&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION (same on every page — highlight current with .active)
+       ============================================================ -->
+  <nav class="nav">
+    <span class="nav-brand">🎀 sadhuuu's Day</span>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="home.html" class="active">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="reasons.html">Reasons I Love You</a></li>
+      <li><a href="timeline.html">Our Timeline</a></li>
+      <li><a href="gift.html">Open Your Gift</a></li>
+      <li><a href="closing.html">A Wish For You</a></li>
+    </ul>
+  </nav>
+
+  <!-- decorative bows in the corners -->
+  <span class="corner-bow tl">🎀</span>
+  <span class="corner-bow tr">🎀</span>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="section">
+      <!-- EDIT: change the name here -->
+      <h1 class="page-title reveal">my favourite person<br>- pretty</h1>
+      <p class="subtitle reveal" style="transition-delay:.15s">
+        made with love by the bestest person in the world — <strong>anuuuuuuu</strong> 🩷
+      </p>
+
+      <!-- 1–2 polaroids tucked beside the hero text -->
+      <div class="photo-row">
+        <!-- REPLACE: photos/photo1.jpg — caption: "you & me, always" -->
+        <figure class="polaroid reveal from-left" style="--tilt:-5deg">
+          <span class="tape"></span>
+          <img src="photos/WhatsApp%20Image%202026-07-11%20at%2002.06.43%20(1).jpeg" alt="you & me, always" style="transform: rotate(-90deg);" />
+          <figcaption class="caption">you &amp; me, always</figcaption>
+        </figure>
+
+        <!-- REPLACE: photos/photo2.jpg — caption: "my favorite person" -->
+        <figure class="polaroid reveal from-right" style="--tilt:4deg; transition-delay:.15s">
+          <span class="pin"></span>
+          <img src="photos/WhatsApp%20Image%202026-07-11%20at%2002.06.43.jpeg" alt="my favorite person" style="object-position: top;" />
+          <figcaption class="caption">my favorite person</figcaption>
+        </figure>
+      </div>
+
+      <p class="reveal" style="transition-delay:.2s">
+        Welcome to your very own little corner of the internet 💕 I made this whole
+        site just for you — click around the menu up top to wander through our story,
+        the reasons I adore you, our memories, and a gift waiting at the end.
+      </p>
+
+      <p class="reveal" style="margin-top:26px">
+        <a href="about.html" class="btn">Start our story →</a>
+      </p>
+    </section>
+
+    <!-- a couple more scattered photos so the home page isn't text-heavy -->
+    <section class="section">
+      <div class="photo-row">
+        <!-- REPLACE: photos/photo3.jpg — caption: "laughing till it hurts" -->
+        <figure class="polaroid reveal" style="--tilt:3deg">
+          <span class="tape"></span>
+          <img src="photos/WhatsApp%20Image%202026-07-11%20at%2002.06.43%20%282%29.jpeg" alt="laughing till it hurts" />
+          <figcaption class="caption">laughing till it hurts</figcaption>
+        </figure>
+
+        <!-- REPLACE: photos/photo4.jpg — caption: "one of a million good days" -->
+        <figure class="polaroid reveal" style="--tilt:-4deg; transition-delay:.1s">
+          <span class="pin"></span>
+          <img src="photos/WhatsApp%20Image%202026-07-11%20at%2002.06.43%20%283%29.jpeg" alt="one of a million good days" />
+          <figcaption class="caption">one of a million good days</figcaption>
+        </figure>
+      </div>
+      <h2 class="section-title reveal">It's your day, birthday girl 🥳</h2>
+      <p class="subtitle reveal" style="transition-delay:.08s">forever grateful that we met 🩷</p>
+    </section>
+
+  </main>
+
+  <!-- music toggle (persists across pages) -->
+  <button class="music-toggle" aria-label="Play music">🔇</button>
+
+  <footer class="site-footer">Made with 💗 · tap any photo to enlarge it</footer>
+
+  <script src="js/main.js"></script>
+  <!-- little welcome confetti on the home page -->
+  <script>window.addEventListener('load', () => window.confettiBurst && confettiBurst(90));</script>
+<script src="js/nav-bridge.js"></script>
+</body>
+</html>
