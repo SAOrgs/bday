@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/Anu bday sadhu/$1"
+    }
+  ]
+}

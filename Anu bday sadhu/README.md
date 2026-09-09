@@ -10,6 +10,33 @@ A small, static birthday website made with HTML, CSS, and JavaScript. It include
 
 For the most reliable browser behavior, serve this folder with any local static server and open the URL it provides. No build step or package installation is required.
 
+## Deploy to Vercel
+
+This repository includes `vercel.json` because the website files are inside the `Anu bday sadhu/` folder.
+
+### Dashboard
+
+1. Push the repository to GitHub.
+2. In Vercel, choose **Add New > Project** and import the repository.
+3. Leave the framework preset as **Other** and keep the default build settings.
+4. Click **Deploy**.
+
+The root `vercel.json` automatically routes the deployment to the website folder.
+
+### CLI
+
+From the repository root, run:
+
+```bash
+npx vercel
+```
+
+For a production deployment:
+
+```bash
+npx vercel --prod
+```
+
 ## Project structure
 
 - `index.html` - Entry point with the splash screen, music, and page frame
